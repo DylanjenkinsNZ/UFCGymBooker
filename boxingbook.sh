@@ -6,12 +6,6 @@
 echo "Enter date for booking e.g. 2021-01-15"
 read target
 
-# deprecated
-# calculate difference in times, add number of sec. in day and mod by same
-# sec_until=5800
-# let mins_until=$sec_until/60
-
-
 # Fetch timetable
 echo "curling time table for $target"
 timetable=$(curl 'https://ufcgymjbr.gymtour.app/ufc-hmvc/mobile/v1/class-session?date='+$target+'&user_id=4945')
