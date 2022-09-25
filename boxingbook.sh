@@ -1,5 +1,6 @@
 #!/bin/bash
 # As of 21-01-2021 this script is working
+# Created by Dylan Jenkins, to be used for educational purposes only
 # In future this script will check to see if the class is available and if so book
 
 # Read day to book
@@ -13,7 +14,6 @@ timetable=$(curl 'https://ufcgymjbr.gymtour.app/ufc-hmvc/mobile/v1/class-session
 # Determine session ID of class
 session_id=`grep -o '.*BOXING' <<< $timetable | tail -c 21 | cut -c 1-5`
 echo "Session ID for Boxing on $target is $session_id"
-
 
 #TODO Check if class has free place
 #TODO Check if able to book due to time limit
